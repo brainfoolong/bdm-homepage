@@ -1,0 +1,8 @@
+# rewrite urls
+# note: this is not used in production, as we use nginx instead of apache for serving stuff
+# its for development
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [L]
